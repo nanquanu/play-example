@@ -1,0 +1,10 @@
+services:
+  web:
+    env_file:
+      - .env
+    build:
+      context: ./
+      args:
+        APPLICATION_SECRET: ${APPLICATION_SECRET}
+    ports:
+      - "9000:9000"
